@@ -258,6 +258,11 @@ img {
   border: 0;
 }
 
+.arrow:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .arrow--left {
   left: 0;
 }
