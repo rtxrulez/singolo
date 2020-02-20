@@ -384,7 +384,10 @@ h2 {
 }
 
 .services__text {
+  overflow: hidden;
+  height: 70px;
   margin: 0;
+  margin-bottom: 17px;
   font-size: 12px;
   font-weight: normal;
   line-height: 22px;
