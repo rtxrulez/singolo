@@ -101,9 +101,11 @@ html {
 
 html {
   font-size: 10px; /* чтобы ремы были одного значения  */
+  min-width: 960px;
 }
 
 body {
+  width: 100%;
   font-family: "Lato", sans-serif, serif;
   font-size: 1.6rem;
 }
@@ -113,10 +115,9 @@ img {
 }
 
 .container {
-  width: 100%;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
-  max-width: 960px;
 }
 
 .header {
@@ -125,17 +126,6 @@ img {
   background-color: #2d303a;
   color: white;
 }
-
-/* .header::before {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: -6px;
-  left: 0;
-  height: 6px;
-  background-color: ;
-} */
 
 .header .container {
   display: flex;
@@ -200,7 +190,7 @@ img {
   padding-right: 0;
 }
 
-.nav__list li:before {
+.nav__list li:not(:last-child):before {
   content: "";
   position: absolute;
   top: 10px;
