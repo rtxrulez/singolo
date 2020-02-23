@@ -131,7 +131,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 89px;
 }
 
 .logo {
@@ -291,8 +291,8 @@ img {
 
 .phone {
   position: relative;
-  top: 51px;
-  left: 70px;
+  top: 53px;
+  left: 72px;
   width: 250px;
   height: 490px;
 }
@@ -324,14 +324,14 @@ img {
 
 .phone--horizontal {
   position: absolute;
-  top: 52px;
-  right: 227px;
+  top: 54px;
+  right: 226px;
   left: auto;
   transform: rotate(90deg);
 }
 
 .phone--horizontal::before {
-  top: -27px;
+  top: -25px;
   right: 10px;
   transform: scale(-1, 1);
 }
@@ -363,6 +363,10 @@ h2 {
   color: #666d89;
   letter-spacing: 0.65px;
   background-color: #f2f2f2;
+}
+
+.section2 .text {
+  text-align: justify;
 }
 
 .services {
