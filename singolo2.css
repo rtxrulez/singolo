@@ -1,0 +1,28 @@
+@import "./fonts.css";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px; /* чтобы ремы были одного значения  */
+  min-width: 960px;
+}
+
+body {
+  width: 100%;
+  font-family: "Lato", sans-serif, serif;
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+}
