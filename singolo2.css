@@ -66,13 +66,17 @@ p {
 
 .gallery {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 -10px;
+  overflow: hidden;
+  max-height: 621px;
 }
 
 .gallery__item {
   width: 220px;
   height: 187px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,6 +84,11 @@ p {
   cursor: pointer;
   color: var(--text-color);
   text-decoration: none;
+}
+
+.gallery__item:focus,
+.gallery__item:hover {
+  opacity: 0.8;
 }
 
 .tags {
@@ -124,8 +133,8 @@ p {
 }
 
 .about__text {
-  margin-bottom: 42px;
-  line-height: 1.7;
+  margin-bottom: 46px;
+  line-height: 1.6;
   letter-spacing: 0.14px;
 }
 
