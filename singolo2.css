@@ -158,6 +158,7 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 300px;
 }
 .card__picture {
   width: 300px;
@@ -166,10 +167,13 @@ p {
 }
 
 .card__header {
+  overflow: hidden;
   margin-bottom: 7px;
   font-size: 18px;
   color: var(--header-color);
   letter-spacing: -0.3px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card__link {
@@ -184,6 +188,8 @@ p {
 
 .card__text {
   display: block;
+  overflow: hidden;
+  height: 3.7em;
   margin-bottom: 23px;
   font-size: 12px;
   font-weight: 400;
