@@ -66,18 +66,18 @@ p {
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 -10px;
   overflow: hidden;
+  margin: 0 -10px;
+  flex-wrap: wrap;
   max-height: 621px;
 }
 
 .gallery__item {
   width: 220px;
   height: 187px;
-  margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
+  margin-left: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
