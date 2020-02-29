@@ -22,10 +22,10 @@
 
 .feedback-controls__text {
   margin-top: 0;
+  margin-bottom: 23px;
   font-size: 12px;
   line-height: 1.9;
   color: #f0d8d9;
-  margin-bottom: 23px;
 }
 
 .feedback__text {
@@ -89,8 +89,8 @@
 }
 
 .contacts {
-  margin-top: 21px;
   margin: 0;
+  margin-top: 21px;
   padding: 0;
   list-style: none;
 }
@@ -131,8 +131,8 @@
 }
 
 .footer {
-  background: #2d303a;
   padding: 13px 0;
+  background: #2d303a;
 }
 
 .footer__container {
@@ -146,9 +146,9 @@
 }
 
 .btn-hide-submit {
-  height: 0px;
-  width: 1px;
   display: block;
+  width: 1px;
+  height: 0px;
   background: transparent;
   border: 0;
 }
