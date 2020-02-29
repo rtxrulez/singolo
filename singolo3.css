@@ -1,5 +1,5 @@
 .feedback {
-  padding: 52px 0 148px 0;
+  padding: 52px 0 46px 0;
   font-weight: 400;
   color: #f0d8d9;
   background-color: #f06c64;
@@ -31,7 +31,7 @@
 .feedback__text {
   margin-bottom: 44px;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.6;
 }
 
 .textarea,
@@ -128,4 +128,27 @@
 }
 .contacts__link--addres::before {
   background-image: url("./assets/images/location.png");
+}
+
+.footer {
+  background: #2d303a;
+  padding: 13px 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy {
+  font-size: 12px;
+  line-height: 2.5;
+}
+
+.btn-hide-submit {
+  height: 0px;
+  width: 1px;
+  display: block;
+  background: transparent;
+  border: 0;
 }
