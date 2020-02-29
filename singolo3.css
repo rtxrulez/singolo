@@ -107,6 +107,11 @@
   text-decoration: none;
 }
 
+.contacts__link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
 .contacts__link--phone::before,
 .contacts__link--email::before,
 .contacts__link--addres::before {
