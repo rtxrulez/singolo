@@ -15,6 +15,7 @@ body,
 html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -38,11 +39,25 @@ img {
   padding: 0 10px;
 }
 
+#home {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
 .header {
   position: relative;
   margin-bottom: 6px;
   background-color: #2d303a;
   color: white;
+}
+
+header.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header .container {
@@ -127,6 +142,7 @@ img {
 }
 
 .section1 {
+  margin-top: 95px;
   position: relative;
   background-color: #f06c64;
   color: white;
@@ -549,6 +565,7 @@ h2 {
   line-height: 22px;
   color: var(--text-color);
   letter-spacing: -0.1px;
+  text-align: justify;
 }
 
 .socials {
@@ -633,6 +650,7 @@ h2 {
   font-size: 12px;
   line-height: 1.9;
   color: #f0d8d9;
+  text-align: justify;
 }
 
 .feedback__text {
