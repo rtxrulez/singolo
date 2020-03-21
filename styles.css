@@ -435,6 +435,7 @@ h2 {
   display: flex;
   overflow: hidden;
   margin: 0 -10px;
+  padding: 5px 0;
   flex-wrap: wrap;
   max-height: 621px;
 }
@@ -451,11 +452,16 @@ h2 {
   cursor: pointer;
   color: var(--text-color);
   text-decoration: none;
+  transition: all 0.2s;
 }
 
 .gallery__item:focus,
 .gallery__item:hover {
   opacity: 0.8;
+}
+
+.gallery__item--active {
+  outline: 5px solid #f06c64;
 }
 
 .tags {
@@ -477,6 +483,7 @@ h2 {
   letter-spacing: -0.3px;
   text-decoration: none;
   color: var(--header-color);
+  transition: all 0.2s;
 }
 
 .tags__item:hover,
