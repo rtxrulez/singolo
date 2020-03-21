@@ -793,13 +793,19 @@ h2 {
 }
 
 .btn--submit {
-  color: white;
-  background: #2d303a;
+  color: #886a30;
+  background: #fbc65f;
+  font-weight: bold;
+  font-family: "Lato", sans-serif, serif;
 }
 
 .btn--submit:focus,
 .btn--submit:hover {
   opacity: 0.8;
+}
+
+.btn--submit:disabled {
+  opacity: 0.7;
 }
 
 /* end singolo3 */

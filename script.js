@@ -64,4 +64,12 @@ window.addEventListener("load", function() {
       $item.classList.add("gallery__item--active");
     });
   });
+
+  // feedback
+  document
+    .querySelector(".feedback-form")
+    .addEventListener("submit", function(e) {
+      e.preventDefault();
+      console.log("submit");
+    });
 });
