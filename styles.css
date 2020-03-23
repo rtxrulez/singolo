@@ -809,3 +809,60 @@ h2 {
 }
 
 /* end singolo3 */
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__container {
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #222;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.modal__header {
+  padding-right: 50px;
+}
+
+.modal__content {
+  padding: 20px 0;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url("./assets/images/close.svg") no-repeat center;
+}
+.modal__close:hover {
+  opacity: 0.8;
+}

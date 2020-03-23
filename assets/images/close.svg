@@ -1,0 +1,13 @@
+<svg
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24' fill='#000'>
+  <defs>
+    <symbol id='close' data-name='close' viewBox='0 0 24 24'>
+      <path class='cls-1' fill='none' d='M0 0h24v24H0z'/>
+      <path id='_Compound_Path_' data-name='_Compound_Path_' class='cls-2' d='M16.3 15.19a.78.78 0 1 1-1.11 1.11L12 13.11 8.81 16.3a.78.78 0 0 1-1.11-1.11L10.89 12 7.7 8.81A.78.78 0 1 1 8.81 7.7L12 10.89l3.19-3.19a.78.78 0 0 1 1.11 1.11L13.11 12z'/>
+    </symbol>
+  </defs>
+  <g id='Layer_2' data-name='Layer 2'>
+    <use width='24' height='24' xlink:href='#close' id='elements'/>
+  </g>
+</svg>

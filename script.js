@@ -1,15 +1,84 @@
 window.addEventListener("load", function() {
   console.log("script.js");
 
-  function randomElements(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+  const modalConfig = {
+    header: "Письмо отправлено",
+    theme: "Без темы",
+    description: "Без описания"
+  };
+
+  const modalConfigTitle = {
+    theme: "Тема: ",
+    description: "Описание: "
+  };
+
+  function modal(conf) {
+    console.log("c", conf);
+    if (document.querySelector(".modal")) {
+      return;
     }
-    console.log("arr", array);
-    return array;
+    let html = `
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__header">
+          ${conf.header}
+          <div class="modal__close"></div>
+        </div>
+        <div class="modal__content">
+          <h3>${conf.theme}</h3>
+          <p>${conf.description}</p>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn--primary modal__btn">OK</button>
+        </div>
+      </div>
+    </div>
+    `;
+
+    document.querySelector("body").insertAdjacentHTML("beforeend", html);
+    const $modalCloseElement = document.querySelectorAll(
+      ".modal__close, .modal__overlay, .modal__btn"
+    );
+
+    $modalCloseElement.forEach(function($el) {
+      $el.addEventListener("click", function() {
+        modalClose();
+      });
+    });
+  }
+
+  function modalClose() {
+    if (!document.querySelector(".modal")) {
+      return;
+    }
+    // обнуление данных
+    resetForm();
+    const $modal = document.querySelector(".modal");
+    $modal.remove();
+  }
+
+  function readForm() {
+    let conf = { ...modalConfig };
+    const subject = document.querySelector(".feedback-form__subject").value;
+    const description = document.querySelector(".feedback-form__description")
+      .value;
+
+    if (subject !== "") {
+      conf.theme = modalConfigTitle.theme + subject;
+    }
+    if (description !== "") {
+      conf.description = modalConfigTitle.description + description;
+    }
+
+    return conf;
+  }
+
+  function resetForm() {
+    document.querySelector(".feedback-form__name").value = "";
+    document.querySelector(".feedback-form__email").value = "";
+    document.querySelector(".feedback-form__subject").value = "";
+    document.querySelector(".feedback-form__description").value = "";
   }
 
   document.addEventListener("scroll", function() {
@@ -18,7 +87,6 @@ window.addEventListener("load", function() {
     const $links = document.querySelectorAll(".nav__link");
 
     $sections.forEach(function($el) {
-      // console.log("$l", scrollPos, $el.offsetTop);
       if (
         $el.offsetTop <= scrollPos &&
         $el.offsetTop + $el.offsetHeight > scrollPos
@@ -70,6 +138,8 @@ window.addEventListener("load", function() {
     .querySelector(".feedback-form")
     .addEventListener("submit", function(e) {
       e.preventDefault();
-      console.log("submit");
+      const conf = readForm();
+      console.log("sss", conf);
+      modal(conf);
     });
 });
