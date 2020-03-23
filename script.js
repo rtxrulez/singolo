@@ -12,6 +12,8 @@ window.addEventListener("load", function() {
     description: "Описание: "
   };
 
+  function sliderTo() {}
+
   function modal(conf) {
     console.log("c", conf);
     if (document.querySelector(".modal")) {
