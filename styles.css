@@ -647,7 +647,7 @@ h2 {
 
 /* singolo3 */
 .feedback {
-  padding: 62px 0 19px 0;
+  padding: 62px 0 62px 0;
   font-weight: 400;
   color: #f0d8d9;
   background-color: #f06c64;
@@ -717,7 +717,7 @@ h2 {
 }
 
 .feedback-form .textarea {
-  height: 203px;
+  height: 159px;
 }
 
 .feedback-controls {
