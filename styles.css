@@ -20,7 +20,7 @@ html {
 
 html {
   font-size: 10px; /* чтобы ремы были одного значения  */
-  min-width: 960px;
+  min-width: 300px;
 }
 
 body {
@@ -34,7 +34,8 @@ img {
 }
 
 .container {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -340,18 +341,15 @@ h2 {
 
 .services {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.services--first {
-  margin-top: 38px;
-}
-
 .services__item {
   position: relative;
-  width: 33%;
+  width: calc(33% - 22px);
   margin-right: 22px;
   margin-left: 0;
   padding-left: 80px;
@@ -366,6 +364,7 @@ h2 {
   letter-spacing: -0.7px;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .services__text {
@@ -437,6 +436,7 @@ h2 {
 
 .portfolio__text {
   margin-bottom: 16px;
+  line-height: 1.5;
 }
 
 .portfolio__container {
@@ -458,14 +458,10 @@ h2 {
 }
 
 .gallery__item {
-  width: 220px;
-  height: 187px;
+  width: calc(25% - 20px);
   margin-right: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   margin-left: 10px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   cursor: pointer;
   color: var(--text-color);
   text-decoration: none;
@@ -551,12 +547,16 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 300px;
 }
+
 .card__picture {
-  width: 300px;
-  height: 300px;
+  width: 100%;
   margin-bottom: 15px;
+}
+
+.card__picture img {
+  width: 217px;
+  max-width: initial;
 }
 
 .card__header {
@@ -882,4 +882,70 @@ h2 {
 }
 .modal__close:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 769px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 40px;
+  }
+
+  .feedback-controls {
+    flex-direction: column;
+  }
+
+  .section1 .container {
+    min-height: 450px;
+  }
+
+  .arrow--left {
+    left: 15px;
+  }
+
+  .arrow--right {
+    right: 15px;
+  }
+
+  .section2 {
+    padding-top: 41px;
+  }
+
+  .services__head {
+    padding-top: 18px;
+  }
+
+  .services__item {
+    width: calc(50% - 31px);
+  }
+
+  .services__item:nth-child(odd) {
+    margin-right: 40px;
+  }
+
+  .services__picture {
+    top: 22px;
+  }
+
+  .portfolio .container {
+    padding-top: 68px;
+    padding-bottom: 44px;
+  }
+  .gallery {
+    max-height: 100%;
+  }
+
+  .gallery__item {
+    width: calc(33.33% - 20px);
+  }
+
+  .about .container {
+    padding-top: 51px;
+    padding-bottom: 50px;
+  }
+
+  .about__text {
+    line-height: 1.9;
+    margin-bottom: 36px;
+  }
 }
