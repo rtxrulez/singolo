@@ -188,6 +188,12 @@ header.header {
   background-color: #fff;
 }
 
+.slider {
+  margin: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
 .slider__control {
   position: absolute;
   top: 45.5%;
@@ -200,19 +206,18 @@ header.header {
 
 .slider__container {
   position: relative;
-  overflow: hidden;
   display: flex;
 }
 
 .slider__item {
   min-width: 100%;
   transition: all 0.3s;
-  transform: translateX(101%);
+  /* transform: translateX(101%); */
 }
 
 .slider__item--active {
   z-index: 1;
-  transform: translateX(0);
+  /* transform: translateX(0); */
 }
 
 .arrow {

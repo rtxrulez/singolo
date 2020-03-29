@@ -12,8 +12,6 @@ window.addEventListener("load", function() {
     description: "Описание: "
   };
 
-  function sliderTo() {}
-
   function modal(conf) {
     console.log("c", conf);
     if (document.querySelector(".modal")) {
@@ -155,4 +153,43 @@ window.addEventListener("load", function() {
   document
     .querySelector(".mobile-menu .burger")
     .addEventListener("click", menuOpen2Close);
+
+  const container = document.querySelector(".slider");
+  const slider = container.querySelector(".slider__container");
+  const sliderImages = container.querySelectorAll(".slider__item");
+  const leftBtn = document.querySelector(".arrow--left");
+  const rightBtn = document.querySelector(".arrow--right");
+
+  let counter = 1;
+  const width = sliderImages[0].clientWidth;
+
+  slider.style.transform = "translateX(" + -width * counter + "px)";
+
+  rightBtn.addEventListener("click", () => {
+    if (counter >= sliderImages.length - 1) return;
+    slider.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+
+    slider.style.transform = "translateX(" + -width * counter + "px)";
+  });
+
+  leftBtn.addEventListener("click", () => {
+    if (counter <= 0) return;
+    slider.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+    slider.style.transform = "translateX(" + `${-width * counter}` + "px)";
+  });
+
+  slider.addEventListener("transitionend", () => {
+    if (sliderImages[counter].id === "lastClone") {
+      slider.style.transition = "none";
+      counter = sliderImages.length - 2;
+      slider.style.transform = "translateX(" + `${-width * counter}` + "px)";
+    }
+    if (sliderImages[counter].id === "firstClone") {
+      slider.style.transition = "none";
+      counter = sliderImages.length - counter;
+      slider.style.transform = "translateX(" + `${-width * counter}` + "px)";
+    }
+  });
 });
