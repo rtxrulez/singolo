@@ -14,10 +14,40 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="script.js"></script>
   </head>
-  <body>
+  <body class="">
+    <div class="mobile-menu">
+      
+      <nav class="nav">
+      <button class="burger"></button>
+        <a href="/" class="logo">
+          <h1 class="logo__text">
+            Singolo
+            <span class="logo__star">*</span>
+          </h1>
+        </a>
+        <ul class="nav__list">
+          <li>
+            <a href="#home" class="nav__link active">Home</a>
+          </li>
+          <li>
+            <a href="#services" class="nav__link">Services</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="nav__link">Portfolio</a>
+          </li>
+          <li>
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li>
+            <a href="#contacts" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div id="home"></div>
     <header class="header section-hr section-hr--header">
       <div class="container">
+        <button class="burger"></button>
         <a href="/" class="logo">
           <h1 class="logo__text">
             Singolo
@@ -117,8 +147,6 @@
               et consequat felis. Quisque condimentum.
             </p>
           </li>
-        </ul>
-        <ul class="services">
           <li class="services__item">
             <div class="services__picture services__picture--phone"></div>
             <h3 class="services__head">Responsive Layout</h3>
@@ -163,66 +191,42 @@
         </div>
 
         <div class="gallery">
-          <a
-            href="#"
-            class="gallery__item gallery__item--active"
-            style="background-image: url('./assets/images/gallery/p1.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p2.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p3.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p4.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p5.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p6.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p7.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p8.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p9.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p10.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p11.png')"
-          ></a>
-          <a
-            href="#"
-            class="gallery__item"
-            style="background-image: url('./assets/images/gallery/p12.png')"
-          ></a>
+          <a href="#" class="gallery__item gallery__item--active">
+            <img src="./assets/images/gallery/p1.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p2.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p3.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p4.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p5.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p6.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p7.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p8.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p9.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p10.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p11.png" alt="" />
+          </a>
+          <a href="#" class="gallery__item">
+            <img src="./assets/images/gallery/p12.png" alt="" />
+          </a>
         </div>
       </div>
     </section>
