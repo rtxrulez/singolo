@@ -141,7 +141,18 @@ window.addEventListener("load", function() {
     .addEventListener("submit", function(e) {
       e.preventDefault();
       const conf = readForm();
-      console.log("sss", conf);
       modal(conf);
     });
+
+  // menu
+  const menuOpen2Close = function() {
+    document.querySelector("body").classList.toggle("menu-open");
+  };
+
+  document
+    .querySelector(".header .burger")
+    .addEventListener("click", menuOpen2Close);
+  document
+    .querySelector(".mobile-menu .burger")
+    .addEventListener("click", menuOpen2Close);
 });
