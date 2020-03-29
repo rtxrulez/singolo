@@ -201,10 +201,11 @@ header.header {
 .slider__container {
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 
 .slider__item {
-  position: absolute;
+  min-width: 100%;
   transition: all 0.3s;
   transform: translateX(101%);
 }
@@ -466,6 +467,7 @@ h2 {
   color: var(--text-color);
   text-decoration: none;
   transition: all 0.2s;
+  display: inline-flex;
 }
 
 .gallery__item:focus,
@@ -902,6 +904,14 @@ h2 {
   height: 20px;
   transition: all 0.2s;
   background: url("./assets/images/burger.svg") no-repeat center;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.menu-open .mobile-menu {
+  display: block;
 }
 
 @media (max-width: 1020px) {
